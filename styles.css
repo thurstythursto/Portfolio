@@ -108,69 +108,6 @@ header {
     border-bottom-left-radius: solid white;
 }
 
-#git {
-    transform: scale(1.5);
-    position: relative;
-}
-
-/* -----------------------------CONTAINER CLASSES----------------------------------- */
-a {
-    display:inline-block;
-    -webkit-box-sizing:border-box;
-    -moz-box-sizing:border-box;
-    box-sizing:border-box;
-    width:200px;
-    height:200px;
-    -webkit-border-radius:50px;
-    -moz-border-radius:50px;
-    border-radius:50px;
-    background-repeat:no-repeat;
-    background-origin:border-box;
-    background-position:relative;
-    border-width:50px;
-    border-color:rgba(0,0,0,0);
-    
-    -webkit-transition:0.5s ease;
-    -moz-transition:0.5s ease;
-    -ms-transition:0.5s ease;
-    -o-transition:0.5s ease;
-    transition:0.5s ease;
-}
-
-a:hover {
-    border-width:0;
-    border-color:rgba(0,0,0,0.5);
-}
-
-a.one {border-style:solid;}
-a.two {border-style:dashed;}
-a.san {border-style:dotted;}
-
-
-a.yon       {border:50px solid  rgba(0,0,0,0.7);}
-a.goo       {border:50px dashed rgba(0,0,0,0.7);}
-a.rok       {border:50px dotted rgba(0,0,0,0.7);}
-a.ryk       {border:50px double rgba(0,0,0,0.7);}
-a.yon:hover {border: 1px solid  rgba(0,0,0,0.7);}
-a.goo:hover {border: 1px dashed rgba(0,0,0,0.7);}
-a.rok:hover {border: 1px dotted rgba(0,0,0,0.7);}
-a.ryk:hover {border: 1px double rgba(0,0,0,0.7);}
-
-
-a.x7,
-a.x8,
-a.x9 {
-    -webkit-border-radius:0;
-	-moz-border-radius:0;
-    border-radius:0;
-}
-a.x7       {border:50px solid  rgba(0,0,0,0.7);}
-a.x8       {border:50px dashed rgba(0,0,0,0.7);}
-a.x9       {border:50px dotted rgba(0,0,0,0.7);}
-a.x7:hover {border: 1px solid  rgba(0,0,0,0.7);}
-a.x8:hover {border: 1px dashed rgba(0,0,0,0.7);}
-a.x9:hover {border: 1px dotted rgba(0,0,0,0.7);}
-
 
 .test {
     background-image: linear-gradient(
@@ -219,20 +156,23 @@ a.x9:hover {border: 1px dotted rgba(0,0,0,0.7);}
     width: 80rem;
     min-height: 200px;
     margin: auto;
-    font-size: 60px;
+    font-size: 80px;
     color: white;
     cursor: pointer;
-    border: solid  white;
+}
+
+.icon-container i {
+    color: white;
 }
 
 .icon-container a {
     margin: auto;
 }
 
-.icon-container a:hover:before {
-    border: solid white;
-    border-radius: 50%;
-}
+.icon-container i:hover {
+    transform: scale(2);
+    opacity: .5;
+}   
 
 .content-container {
     display: flex;
@@ -310,15 +250,14 @@ a.x9:hover {border: 1px dotted rgba(0,0,0,0.7);}
     }
     .icon-container {
         flex-direction: column;
-        border: solid red;
     }
     #git {
-        border: yellow solid;
         margin: 2rem 2rem;
+        color: white;
     }
     #linked {
-        border: yellow solid;
         margin: 2rem 2rem;
+        color: white;
     }
     .work-container {
         flex-direction: column;
