@@ -362,7 +362,7 @@ header {
 }
 
 .section:nth-child(4) {
-    background-color: blue;
+    background: url(tt.png);
     color: #fff;
     top: 250vh;
     z-index: 4;
@@ -427,16 +427,17 @@ header {
   }
   
   .flip-card-front {
-    background-color: #bbb;
+    background-color: lightblue;
     color: black;
   }
   
   .flip-card-back {
-    background-color: #2980b9;
+    background-color: #415460;
     color: white;
     transform: rotateY(180deg);
     text-align: center;
     line-height: 1.25rem;
+    border: .25px solid red;
   }
 
   .flip-card-back h1 {
