@@ -44,7 +44,7 @@ header {
     top: 50%;
     transform: translate(-50%, -50%);
     display: block;
-    color: white;
+    color: #fc766aff;
     font-size: 124px;
     letter-spacing: 8px;
     cursor: pointer;
@@ -58,8 +58,8 @@ header {
       45deg,
       transparent 0,
       transparent 2px,
-      cyan 2px,
-      cyan 4px
+      #5cc8d7ff 2px,
+      #5cc8d7ff 4px
     );
     -webkit-background-clip: text;
     top: 0px;
@@ -76,8 +76,8 @@ header {
       135deg,
       transparent 0,
       transparent 2px,
-      red 2px,
-      red 4px
+      #5cc8d7ff 2px,
+      #5cc8d7ff 4px
     );
     -webkit-background-clip: text;
     top: 0px;
@@ -116,6 +116,7 @@ header {
         #54b3d6 50%,
         #000 50%
     );
+    cursor: pointer;
     background-size: 200% 100%;
     background-position: -100%;
     display: inline-block;
@@ -140,7 +141,7 @@ header {
 
 .test:hover {
     background-position: 0;
-    cursor:default;
+    cursor:pointer;
 }
 
 .test:hover::before {
@@ -339,7 +340,7 @@ header {
 }
 
 .section:nth-child(1) {
-    background-color: black;
+    background-color: grey;
     color: white;
     top: 0;
     z-index: 1;
@@ -427,19 +428,145 @@ header {
   }
   
   .flip-card-front {
-    background-color: lightblue;
-    color: black;
-  }
+    background-color: #5b84b1ff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;  }
   
   .flip-card-back {
-    background-color: #415460;
-    color: white;
-    transform: rotateY(180deg);
+    background-color: #143d59;
+    color: #5b84b1ff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;    transform: rotateY(180deg);
     text-align: center;
     line-height: 1.25rem;
-    border: .25px solid red;
-  }
 
-  .flip-card-back h1 {
-      margin-top: 4rem;
   }
+.flip-card-front h1 {
+    color: #143d59;
+}
+.flip-card-back a {
+    text-decoration: none;
+    color: #5b84b1ff;
+}
+
+.flip-card-back a:hover {
+    color: #fc766aff;
+    text-decoration: underline;
+}
+
+.flip-card-back h1:hover {
+    color: #fc766aff;
+}
+
+.flip-card-back p:hover {
+    color: #fc766aff;
+}
+
+div:nth-child(1) .flip-card-front {
+    box-shadow: rgba(177, 98, 78, 0.4) -5px 5px , rgba(177, 98, 78, 0.3) -10px 10px, rgba(177, 98, 78, 0.2) -15px 15px, rgba(177, 98, 78, 0.1) -20px 20px, rgba(177, 98, 78, 0.05) -25px 25px;
+}
+
+div:nth-child(2) .flip-card-front {
+    box-shadow: rgba(177, 98, 78, 0.4) 0px 5px, rgba(177, 98, 78, 0.3) 0px 10px, rgba(177, 98, 78, 0.2) 0px 15px, rgba(177, 98, 78, 0.1) 0px 20px, rgba(177, 98, 78, 0.05) 0px 25px;
+}
+
+div:nth-child(3) .flip-card-front {
+    box-shadow: rgba(177, 98, 78, 0.4) 5px 5px, rgba(177, 98, 78, 0.3) 10px 10px, rgba(177, 98, 78, 0.2) 15px 15px, rgba(177, 98, 78, 0.1) 20px 20px, rgba(177, 98, 78, 0.05) 25px 25px;
+}
+
+
+
+div:nth-child(1) .flip-card-back {
+    box-shadow: rgba(240, 91, 46, 0.4) -5px 5px, rgba(240, 91, 46, 0.3) -10px 10px, rgba(240, 91, 46, 0.2) -15px 15px, rgba(240, 91, 46, 0.1) -20px 20px, rgba(240, 91, 46, 0.05) -25px 25px;
+}
+
+div:nth-child(2) .flip-card-back {
+    box-shadow: rgba(240, 91, 46, 0.4) 0px 5px, rgba(240, 91, 46, 0.3) 0px 10px, rgba(240, 91, 46, 0.2) 0px 15px, rgba(240, 91, 46, 0.1) 0px 20px, rgba(240, 91, 46, 0.05) 0px 25px;
+}
+
+div:nth-child(3) .flip-card-back {
+    box-shadow: rgba(240, 91, 46, 0.4) 5px 5px, rgba(240, 91, 46, 0.3) 10px 10px, rgba(240, 91, 46, 0.2) 15px 15px, rgba(240, 91, 46, 0.1) 20px 20px, rgba(240, 91, 46, 0.05) 25px 25px;
+}
+
+.flip-card-back h1 {
+      margin-top: 4rem;
+}
+
+.shapeContainer {
+    width: 100vw;
+    height: 600px;
+    position: relative;
+    text-align: center;
+    font-size: 100px
+}
+
+.shapeContainer i {
+    color: white;
+}
+
+.shapeContainer a {
+    margin: auto;
+}
+
+.circle {
+    background: #32557f;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: absolute;
+    top: 150px;
+    left: 10px;
+}
+.circle1 {
+    background: teal;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    position: absolute;
+    top: 175px;
+    left: 200px;
+}
+.circle2 {
+    background: yellow;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    right: 100px;
+}
+.circle3 {
+    background: red;
+    width: 275px;
+    height: 275px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 250px;
+    right: 500px
+}
+.circle4 {
+    background: green;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 175px;
+    left: 550px;
+}
+
+.circle5 {
+    background: purple;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+}
+.circle6 {
+    background: grey;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 500px;
+    left: 800px;
+}
