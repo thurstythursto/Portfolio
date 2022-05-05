@@ -1,21 +1,20 @@
 /* Root ---------------------------------------------------------------- */
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:900i&display=swap');
-
 body {
     margin: 0;
     background-color: white;
 }
 
-@import 'https://fonts.googleapis.com/css?family=Sintony';
- * {
-	 box-sizing: border-box;
+@font-face {
+    font-family: test;
+    src: url(HammersmithOne-Regular.ttf);
 }
+
  body {
 	 background: #222;
 	 padding: 0;
 	 margin: 0;
-	 font-family: 'Sintony', sans-serif;
+	 font-family: 'test', sans-serif;
 	 font-weight: 300;
 	 font-size: 13px;
 	 text-transform: uppercase;
@@ -150,8 +149,7 @@ header {
 
 
 .icon-container {
-    display: flex;
-    flex-direction: row;
+    display: block;
     align-items: center;
     justify-content: center;
     width: 80rem;
@@ -164,16 +162,60 @@ header {
 
 .icon-container i {
     color: white;
+    margin-bottom: 2rem;
+    margin-right: 5rem;
+    font-size: 6rem;
 }
 
 .icon-container a {
     margin: auto;
+    text-decoration: none;
+    color: white;
 }
 
-.icon-container i:hover {
-    transform: scale(2);
-    opacity: .5;
-}   
+.icon-container a:hover, i:hover {
+    cursor: pointer;
+    
+}
+
+.testt {
+    background-image: linear-gradient(
+        to left,
+        #54b3d6,
+        #54b3d6 50%,
+        #fff 50%
+    );
+    cursor: pointer;
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.testt:before {
+    content: '';
+    background: #54b3d6;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.testt:hover {
+    background-position: 0;
+    cursor:pointer;
+}
+
+.testt:hover::before {
+    width: 100%;
+}
 
 .content-container {
     display: flex;
@@ -248,17 +290,6 @@ header {
     }
     #works {
         top: 200vh;
-    }
-    .icon-container {
-        flex-direction: column;
-    }
-    #git {
-        margin: 2rem 2rem;
-        color: white;
-    }
-    #linked {
-        margin: 2rem 2rem;
-        color: white;
     }
     .work-container {
         flex-direction: column;
@@ -356,8 +387,9 @@ header {
 }
 
 .section:nth-child(3) {
-    background-color: black;
-    color: #fff;
+    background: linear-gradient(-45deg, #fc766aff, #fc766aff, #5cc8d7ff, #5cc8d7ff);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
     top: 200vh;
     z-index: 3;
 }
@@ -369,7 +401,17 @@ header {
     z-index: 4;
 }
 
-
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
 /* -----------------------------.SECTION .FIXED CLASSES----------------------------------- */
 
@@ -488,85 +530,4 @@ div:nth-child(3) .flip-card-back {
 
 .flip-card-back h1 {
       margin-top: 4rem;
-}
-
-.shapeContainer {
-    width: 100vw;
-    height: 600px;
-    position: relative;
-    text-align: center;
-    font-size: 100px
-}
-
-.shapeContainer i {
-    color: white;
-}
-
-.shapeContainer a {
-    margin: auto;
-}
-
-.circle {
-    background: #32557f;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    position: absolute;
-    top: 150px;
-    left: 10px;
-}
-.circle1 {
-    background: teal;
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    position: absolute;
-    top: 175px;
-    left: 200px;
-}
-.circle2 {
-    background: yellow;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    position: absolute;
-    top: 50px;
-    right: 100px;
-}
-.circle3 {
-    background: red;
-    width: 275px;
-    height: 275px;
-    border-radius: 50%;
-    position: absolute;
-    bottom: 250px;
-    right: 500px
-}
-.circle4 {
-    background: green;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    position: absolute;
-    bottom: 175px;
-    left: 550px;
-}
-
-.circle5 {
-    background: purple;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    position: absolute;
-    bottom: 50px;
-    right: 50px;
-}
-.circle6 {
-    background: grey;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    position: absolute;
-    bottom: 500px;
-    left: 800px;
 }
