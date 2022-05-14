@@ -217,33 +217,26 @@ header {
     width: 100%;
 }
 
-.content-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-shadow: #0a0a0a;
-    width: 100%;
-}
-
 .about-container {
     align-items: center;
     justify-content: center;
-    box-shadow: #0a0a0a;
     width: 50rem;
     height: 100vh;
     text-align: center;
     overflow:initial;
     letter-spacing: 6px;
-    line-height: 1.5rem;
+    line-height: 1.95rem;
 }
 
 .about-container h1 {
-    margin: 3rem 0rem;
+    margin: 1rem 0rem;
+    margin-top: 3rem;
+    font-size: 3rem;
 }
 
 .about-container h4 {
     margin: 3rem 3rem;
+    font-size: 1.25rem;
 }
 
 .work-container {
@@ -258,7 +251,6 @@ header {
 
 .works1, .works2, .works3 {
     width: 20rem;
-    border: solid white;
     text-align: center;
     padding: 2rem 2rem;
 }
@@ -439,12 +431,13 @@ header {
 }
 
 
+
 .flip-card {
     background-color: transparent;
     width: 400px;
     height: 400px;
     perspective: 1000px;
-    padding: 1rem 1rem;
+    padding: 3rem 1rem;
   }
   
   .flip-card-inner {
@@ -454,10 +447,10 @@ header {
     text-align: center;
     transition: transform 0.6s;
     transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
   }
   
-  .flip-card:hover .flip-card-inner {
+  .fliip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
   }
   
@@ -471,38 +464,47 @@ header {
   
   .flip-card-front {
     background-color: #5b84b1ff;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;  }
+    /*box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;  */}
   
   .flip-card-back {
     background-color: #143d59;
     color: #5b84b1ff;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;    transform: rotateY(180deg);
+    /*box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;    transform: rotateY(180deg);*/
     text-align: center;
     line-height: 1.25rem;
 
   }
 .flip-card-front h1 {
     color: #143d59;
+    font-size: .5rem;
+}
+
+.flip-card-front p {
+    color: #143d59;
+    font-size: .5rem;
 }
 .flip-card-back a {
     text-decoration: none;
     color: #5b84b1ff;
+    font-size: .75rem;
 }
 
 .flip-card-back a:hover {
     color: #fc766aff;
     text-decoration: underline;
+    font-size: 1rem;
 }
 
 .flip-card-back h1:hover {
     color: #fc766aff;
+    font-size: 2.5rem;
 }
 
 .flip-card-back p:hover {
     color: #fc766aff;
 }
 
-div:nth-child(1) .flip-card-front {
+/*div:nth-child(1) .flip-card-front {
     box-shadow: rgba(177, 98, 78, 0.4) -5px 5px , rgba(177, 98, 78, 0.3) -10px 10px, rgba(177, 98, 78, 0.2) -15px 15px, rgba(177, 98, 78, 0.1) -20px 20px, rgba(177, 98, 78, 0.05) -25px 25px;
 }
 
@@ -513,8 +515,6 @@ div:nth-child(2) .flip-card-front {
 div:nth-child(3) .flip-card-front {
     box-shadow: rgba(177, 98, 78, 0.4) 5px 5px, rgba(177, 98, 78, 0.3) 10px 10px, rgba(177, 98, 78, 0.2) 15px 15px, rgba(177, 98, 78, 0.1) 20px 20px, rgba(177, 98, 78, 0.05) 25px 25px;
 }
-
-
 
 div:nth-child(1) .flip-card-back {
     box-shadow: rgba(240, 91, 46, 0.4) -5px 5px, rgba(240, 91, 46, 0.3) -10px 10px, rgba(240, 91, 46, 0.2) -15px 15px, rgba(240, 91, 46, 0.1) -20px 20px, rgba(240, 91, 46, 0.05) -25px 25px;
@@ -528,6 +528,75 @@ div:nth-child(3) .flip-card-back {
     box-shadow: rgba(240, 91, 46, 0.4) 5px 5px, rgba(240, 91, 46, 0.3) 10px 10px, rgba(240, 91, 46, 0.2) 15px 15px, rgba(240, 91, 46, 0.1) 20px 20px, rgba(240, 91, 46, 0.05) 25px 25px;
 }
 
+*/
+
 .flip-card-back h1 {
       margin-top: 4rem;
 }
+
+
+.slider {
+    width: 400px;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+.slides {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .slides::-webkit-scrollbar {
+    width: 0.1px;
+    height: 10px;
+  }
+  .slides::-webkit-scrollbar-thumb {
+    background-color: #fc766aff;
+    background-image:-webkit-linear-gradient(45deg,
+    rgba(255,255,255,.3) 20%,transparent 20%,transparent 40%,
+    rgba(255, 255, 255, 0.3) 40%,
+    rgba(255,255,255,.3) 60%,transparent 60%,transparent 80%,
+    rgba(255, 255, 255, 0.3) 80%);
+    border-radius: 10px;
+    
+  }
+  .slides::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  .slides > div {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 400px;
+    height: 400px;
+    margin-right: 50px;
+    border-radius: 10px;
+    background: transparent;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Don't need button navigation */
+  @supports (scroll-snap-type) {
+    .slider > a {
+      display: none;
+    }
+  }
+
+
+
+
+
+
+
+
