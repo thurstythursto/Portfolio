@@ -223,20 +223,18 @@ header {
     width: 50rem;
     height: 100vh;
     text-align: center;
-    overflow:initial;
+    overflow-x: visible;
     letter-spacing: 6px;
     line-height: 1.95rem;
 }
 
 .about-container h1 {
-    margin: 1rem 0rem;
-    margin-top: 3rem;
     font-size: 3rem;
 }
 
 .about-container h4 {
-    margin: 3rem 3rem;
     font-size: 1.25rem;
+    margin-bottom: 5rem;
 }
 
 .work-container {
@@ -268,14 +266,22 @@ header {
     .frontPage p {
         font-size: 1rem;
     }
+    
+    .content-container {
+        border: solid;
+    }
+
+    .about-container {
+        border: solid black;
+    }
     .about-container h1{
         font-size: 30px;
-        margin-bottom: -0.5rem;
+        margin-bottom: 0.5rem;
         margin-top: -0.05rem;
     }
     .about-container h4 {
         font-size: 15px;
-        margin: 1rem 10rem;
+        margin: 1rem 8em;
     }
     #about {
         top: 100vh;
